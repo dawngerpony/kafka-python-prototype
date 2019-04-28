@@ -1,12 +1,21 @@
 Kafka Python prototype
 ======================
 
-From https://towardsdatascience.com/getting-started-with-apache-kafka-in-python-604b3250aa05:
+Inspired by an excellent article: [Getting started with Apache Kafka in Python](https://towardsdatascience.com/getting-started-with-apache-kafka-in-python-604b3250aa05).
 
 Prerequisites
 -------------
 
+Technologies:
+
+* Python 3 + virtualenv + pip
+* Docker + docker-compose
+
+Additional steps:
+
 1. Download and unzip Kafka from https://kafka.apache.org/quickstart.
+2. Clone the excellent [kafka-stack-docker-compose](https://github.com/simplesteph/kafka-stack-docker-compose)
+   git repository, to get yourself an easy Docker-based Kafka/Zookeeper installation.
 
 Getting started
 ---------------
@@ -20,6 +29,7 @@ Getting started
 
         virtualenv .venv
         source .venv/bin/activate
+        pip install -r requirements.txt
 
 3. Create a topic called 'test':
 
@@ -34,4 +44,9 @@ Getting started
 
         python publish.py
 
-6. You should 
+6. You should see your message printed out in the stdout (standard output) console of the consume script!
+
+Resources
+---------
+
+* [Apache Avro™ 1.8.2 Getting Started (Python)](https://avro.apache.org/docs/current/gettingstartedpython.html)
